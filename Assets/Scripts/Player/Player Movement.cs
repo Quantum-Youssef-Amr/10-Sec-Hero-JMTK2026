@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
         DashParticles.Play();
         EventBus.Instance.OnPlayerDash?.Invoke();
+        EventBus.Instance.OnCameraShake?.Invoke();
         StartCoroutine(ResetDash());
     }
 

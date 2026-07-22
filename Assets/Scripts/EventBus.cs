@@ -9,6 +9,10 @@ public class EventBus : MonoBehaviour
     public Action<int> OnAddToTimer, OnTimerUpdate;
     public Action OnTimerIsZero, OnTimerWarning, OnTimerNoWarning, OnTimerTargetReached;
 
+    public Action OnGameOver;
+    public Action<int> OnWinLevel;
+
+    public Action OnCameraShake;
 
     void Awake()
     {

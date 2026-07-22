@@ -40,7 +40,10 @@ public class TimerSystem : MonoBehaviour
         TimerUpdater--;
 
         if (TimerUpdater <= 0)
+        {
             EventBus.Instance.OnTimerIsZero?.Invoke();
+            EventBus.Instance.OnGameOver?.Invoke();
+        }
 
         if (TimerUpdater >= TargetTime)
             EventBus.Instance.OnTimerTargetReached?.Invoke();
