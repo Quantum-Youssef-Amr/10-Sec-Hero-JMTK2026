@@ -5,7 +5,7 @@ using System;
 
 public class TimerSystem : MonoBehaviour
 {
-    [SerializeField] private int StageTimerStartValue, WarningOnTime = 3;
+    [SerializeField] private int StageTimerStartValue, WarningOnTime = 3, TargetTime;
     private int _currentTime;
 
     private int TimerUpdater
@@ -41,6 +41,9 @@ public class TimerSystem : MonoBehaviour
 
         if (TimerUpdater <= 0)
             EventBus.Instance.OnTimerIsZero?.Invoke();
+
+        if (TimerUpdater >= TargetTime)
+            EventBus.Instance.OnTimerTargetReached?.Invoke();
 
         if (TimerUpdater <= WarningOnTime)
             EventBus.Instance.OnTimerWarning?.Invoke();

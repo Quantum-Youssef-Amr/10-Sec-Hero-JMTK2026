@@ -5285,8 +5285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb1e3210e5855948b4ad7aa5cc1eaeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimerSystem
-  StageTimerStartValue: 10
+  StageTimerStartValue: 5
   WarningOnTime: 3
+  TargetTime: 80
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Follower
   Target: {fileID: 2036701684}
-  Speed: 0
+  Speed: 10
   Offset: {x: 0, y: 0, z: -10}
 --- !u!1 &619394800
 GameObject:
@@ -5807,7 +5808,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
