@@ -39,15 +39,15 @@ public class TimerSystem : MonoBehaviour
 
         TimerUpdater--;
 
-        if (TimerUpdater == 0)
-        {
+        if (TimerUpdater <= 0)
             EventBus.Instance.OnTimerIsZero?.Invoke();
-            yield return null;
-        }
 
         if (TimerUpdater <= WarningOnTime)
             EventBus.Instance.OnTimerWarning?.Invoke();
+        else
+            EventBus.Instance.OnTimerNoWarning?.Invoke();
 
-        StartCoroutine(Countdown());
+        if (TimerUpdater > 0)
+            StartCoroutine(Countdown());
     }
 }

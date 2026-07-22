@@ -7,7 +7,7 @@ public class EventBus : MonoBehaviour
     public Action OnPlayerDash;
 
     public Action<int> OnAddToTimer, OnTimerUpdate;
-    public Action OnTimerIsZero, OnTimerWarning;
+    public Action OnTimerIsZero, OnTimerWarning, OnTimerNoWarning;
 
 
     void Awake()
