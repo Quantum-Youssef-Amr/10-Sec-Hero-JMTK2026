@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     protected Rigidbody2D _rb;
     protected Transform _t;
-    void Start()
+    protected virtual void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _t = transform;
@@ -21,6 +21,6 @@ public class Enemy : MonoBehaviour
 
     protected virtual void MoveTowardDoor()
     {
-        _rb.AddForce(MovementSpeed * Time.deltaTime * TimeScale * Vector2.zero - (Vector2)_t.position, ForceMode2D.Force);
+        _rb.AddForce(MovementSpeed * Time.deltaTime * TimeScale * (Vector2.zero - (Vector2)_t.position).normalized, ForceMode2D.Force);
     }
 }

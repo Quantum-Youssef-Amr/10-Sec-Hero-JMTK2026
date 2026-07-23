@@ -23,13 +23,19 @@ public class DoorHealth : Health
         DoorParticle.Play();
     }
 
+    public override void TakeDamage(float Damage)
+    {
+        base.TakeDamage(Damage);
+        EventBus.Instance.OnDoorHealthChanged?.Invoke(_currentHealth / MaxHealth);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemies"))
         {
             collision.TryGetComponent(out EnemyHealth m_health);
             if (m_health)
-                m_health.TakeDamage(10);
+                m_health.DieImmediate();
 
 
             EventBus.Instance.OnCameraShake?.Invoke();

@@ -8,7 +8,7 @@ public class EventBus : MonoBehaviour
 
     public Action<int> OnAddToTimer, OnTimerUpdate;
     public Action OnTimerIsZero, OnTimerWarning, OnTimerNoWarning, OnTimerTargetReached;
-
+    public Action<float> OnDoorHealthChanged;
     public Action OnGameOver;
     public Action<int> OnWinLevel;
 

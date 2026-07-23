@@ -11,16 +11,26 @@ public class EnemyHealth : Health
     protected override void Die()
     {
         EventBus.Instance.OnAddToTimer?.Invoke(Reward);
-        EventBus.Instance.OnCameraShake?.Invoke();
-        SpawnDeathParticles();
-        // add sounds
-        base.Die();
+        DieWithoutReward();
     }
 
     public override void TakeDamage(float Damage)
     {
         HurtAnimation.Play();
         base.TakeDamage(Damage);
+    }
+
+    public void DieImmediate()
+    {
+        DieWithoutReward();
+    }
+
+    private void DieWithoutReward()
+    {
+        EventBus.Instance.OnCameraShake?.Invoke();
+        SpawnDeathParticles();
+        // add sounds
+        base.Die();
     }
 
     private void SpawnDeathParticles()
