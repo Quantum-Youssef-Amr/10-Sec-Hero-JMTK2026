@@ -29,7 +29,7 @@ public class EnemyHealth : Health
     {
         EventBus.Instance.OnCameraShake?.Invoke();
         SpawnDeathParticles();
-        // add sounds
+        // TODO add sounds
         base.Die();
     }
 
