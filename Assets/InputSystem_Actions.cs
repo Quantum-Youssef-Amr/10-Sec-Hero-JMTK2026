@@ -288,6 +288,17 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""c58d2806-6896-4f45-b4ca-4997d5a8ffe1"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""e5df6977-217e-4c79-a353-fd8052ba7a70"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",

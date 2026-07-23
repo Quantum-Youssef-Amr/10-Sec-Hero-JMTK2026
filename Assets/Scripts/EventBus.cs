@@ -14,6 +14,7 @@ public class EventBus : MonoBehaviour
 
     public Action OnCameraShake;
 
+    public Action OnStartLevelSpawner;
     void Awake()
     {
         if (Instance != null) return;
