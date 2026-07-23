@@ -22,10 +22,9 @@ public class TimerSystem : MonoBehaviour
     void Start()
     {
         TimerUpdater = StageTimerStartValue;
-        StartCoroutine(Countdown());
-
 
         EventBus.Instance.OnAddToTimer += AddTimeToTimer;
+        EventBus.Instance.OnStartTimer += () => StartCoroutine(Countdown());
     }
 
     private void AddTimeToTimer(int additionalTime)
@@ -43,6 +42,7 @@ public class TimerSystem : MonoBehaviour
         {
             EventBus.Instance.OnTimerIsZero?.Invoke();
             EventBus.Instance.OnGameOver?.Invoke();
+            EventBus.Instance.OnCameraShake?.Invoke();
         }
 
         if (TimerUpdater >= TargetTime)
