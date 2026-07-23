@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
         DashParticles.Play();
         EventBus.Instance.OnPlayerDash?.Invoke();
-        EventBus.Instance.OnCameraShake?.Invoke();
+        // EventBus.Instance.OnCameraShake?.Invoke();
         StartCoroutine(ResetDash());
     }
 
@@ -75,5 +75,13 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(DashCoolDown);
         _canDash = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (_canDash) return;
+
+        if (collision.gameObject.CompareTag("Enemies"))
+            collision.GetComponent<EnemyHealth>().TakeDamage(1f);
     }
 }

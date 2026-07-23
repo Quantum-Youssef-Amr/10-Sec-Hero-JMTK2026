@@ -1,0 +1,32 @@
+using System;
+using Unity.VisualScripting;
+using UnityEngine;
+
+[RequireComponent(typeof(SpriteRenderer))]
+public class EnemyHealth : Health
+{
+    [SerializeField] protected int Reward;
+    [SerializeField] protected GameObject DeathParticles;
+    [SerializeField] protected Animation HurtAnimation;
+    protected override void Die()
+    {
+        EventBus.Instance.OnAddToTimer?.Invoke(Reward);
+        EventBus.Instance.OnCameraShake?.Invoke();
+        SpawnDeathParticles();
+        // add sounds
+        base.Die();
+    }
+
+    public override void TakeDamage(float Damage)
+    {
+        HurtAnimation.Play();
+        base.TakeDamage(Damage);
+    }
+
+    private void SpawnDeathParticles()
+    {
+        ParticleSystem.MainModule m_par = Instantiate(DeathParticles, transform.position, Quaternion.identity).GetComponent<ParticleSystem>().main;
+
+        m_par.startColor = GetComponent<SpriteRenderer>().color;
+    }
+}

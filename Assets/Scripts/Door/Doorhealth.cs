@@ -3,7 +3,6 @@ using UnityEngine;
 public class DoorHealth : Health
 {
     [SerializeField] private int NextLevelNumber;
-    [SerializeField] private LayerMask EnemiesLayerMask;
     [SerializeField] private GameObject DoorOverlay;
     [SerializeField] private ParticleSystem DoorParticle;
     [SerializeField] private Animation DamageAnimation;
@@ -26,11 +25,16 @@ public class DoorHealth : Health
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == EnemiesLayerMask)
+        if (collision.gameObject.CompareTag("Enemies"))
         {
-            TakeDamage(1);
+            collision.TryGetComponent(out EnemyHealth m_health);
+            if (m_health)
+                m_health.TakeDamage(10);
+
+
             EventBus.Instance.OnCameraShake?.Invoke();
             DamageAnimation.Play();
+            TakeDamage(1);
         }
 
         if (collision.gameObject.layer == LayerMask.GetMask("Player") && _canAdvance)

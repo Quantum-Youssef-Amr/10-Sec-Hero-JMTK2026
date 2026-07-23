@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 440226397}
   - component: {fileID: 440226399}
   - component: {fileID: 440226398}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5648,7 +5648,7 @@ GameObject:
   - component: {fileID: 2036701688}
   - component: {fileID: 2036701687}
   - component: {fileID: 2036701686}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5777,7 +5777,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10735,9 +10735,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorHealth
   MaxHealth: 10
   NextLevelNumber: 2
-  EnemiesLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
   DoorOverlay: {fileID: 3925649312373465805}
   DoorParticle: {fileID: 2127124760378176619}
   DamageAnimation: {fileID: 8954124574086403905}
@@ -10810,7 +10807,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2843373636728624282}
   - component: {fileID: 2222716607170616691}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorOverlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10828,7 +10825,7 @@ GameObject:
   - component: {fileID: 8136157320573563655}
   - component: {fileID: 2127124760378176619}
   - component: {fileID: 3308463290435371121}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10848,7 +10845,7 @@ GameObject:
   - component: {fileID: 8954124574086403904}
   - component: {fileID: 3365316150045478960}
   - component: {fileID: 8954124574086403905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10929,7 +10926,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 5310ff83f2fa0b444b4d8b82551cbe1a, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
