@@ -29,7 +29,10 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(SpawnerTimeGap);
         for (int _ = 0; _ < NumberOfSpawnLocations;)
         {
-            Vector2 m_spawnLocation = 2.2f * Camera.main.orthographicSize * UnityEngine.Random.insideUnitCircle;
+            Vector2 m_spawnLocation = UnityEngine.Random.insideUnitCircle;
+            m_spawnLocation.Normalize();
+            m_spawnLocation *= UnityEngine.Random.Range(2.2f, 3f) * Camera.main.orthographicSize;
+
             LevelEnemiesUnlockTiming m_enemyToSpawn = levelEnemiesUnlockTimings[UnityEngine.Random.Range(0, levelEnemiesUnlockTimings.Length)];
             if (!m_enemyToSpawn.Unlocked)
                 continue;

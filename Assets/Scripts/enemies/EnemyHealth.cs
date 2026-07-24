@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ using UnityEngine;
 public class EnemyHealth : Health
 {
     [SerializeField] protected int Reward;
-    [SerializeField] protected GameObject DeathParticles;
+    [SerializeField] protected GameObject DeathParticles, RewardText;
     [SerializeField] protected Animation HurtAnimation;
     protected override void Die()
     {
@@ -37,6 +38,9 @@ public class EnemyHealth : Health
     private void SpawnDeathParticles()
     {
         ParticleSystem.MainModule m_par = Instantiate(DeathParticles, transform.position, Quaternion.identity).GetComponent<ParticleSystem>().main;
+        TextMeshProUGUI m_rewardText = Instantiate(RewardText, transform.position, Quaternion.identity).GetComponent<TextMeshProUGUI>();
+
+        m_rewardText.text = $"+{Reward}";
 
         m_par.startColor = GetComponent<SpriteRenderer>().color;
     }
