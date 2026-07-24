@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -15,12 +16,17 @@ public class SettingManager : MonoBehaviour
 
     void Start()
     {
-        EventBus.Instance.OnEnemyDeath += () => AddToKills(1);
+        EventBus.Instance.OnEnemyDeath += AddAKillToKills;
+    }
+
+    private void AddAKillToKills()
+    {
+        AddToKills(1);
     }
 
     void OnDisable()
     {
-        EventBus.Instance.OnEnemyDeath -= () => AddToKills(1);
+        EventBus.Instance.OnEnemyDeath -= AddAKillToKills;
     }
 
     public void ToggleMusic()

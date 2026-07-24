@@ -12,13 +12,18 @@ public class Spawner : MonoBehaviour
     {
         _t = transform;
         EventBus.Instance.OnTimerUpdate += CheckForEnemiesUnlocks;
-        EventBus.Instance.OnStartLevelSpawner += () => StartCoroutine(SpawnEnemies());
+        EventBus.Instance.OnStartLevelSpawner += StartEnemySpawner;
     }
 
     void OnDisable()
     {
         EventBus.Instance.OnTimerUpdate -= CheckForEnemiesUnlocks;
-        EventBus.Instance.OnStartLevelSpawner -= () => StartCoroutine(SpawnEnemies());
+        EventBus.Instance.OnStartLevelSpawner -= StartEnemySpawner;
+    }
+
+    private void StartEnemySpawner()
+    {
+        StartCoroutine(SpawnEnemies());
     }
 
     private void CheckForEnemiesUnlocks(int TimerValue)

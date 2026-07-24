@@ -14,17 +14,26 @@ public class TimerUI : MonoBehaviour
         TimerUIText = GetComponent<TextMeshProUGUI>();
 
         EventBus.Instance.OnTimerUpdate += UpdateTimerUI;
-        EventBus.Instance.OnTimerWarning += () => ChangeTimerToWarning(WarningTimerColor);
-        EventBus.Instance.OnTimerNoWarning += () => ChangeTimerToWarning(DefaultColor);
+        EventBus.Instance.OnTimerWarning += ChangeTimerToWarning;
+        EventBus.Instance.OnTimerNoWarning += SetTimerToNormal;
     }
 
     void OnDisable()
     {
         EventBus.Instance.OnTimerUpdate -= UpdateTimerUI;
-        EventBus.Instance.OnTimerWarning -= () => ChangeTimerToWarning(WarningTimerColor);
-        EventBus.Instance.OnTimerNoWarning -= () => ChangeTimerToWarning(DefaultColor);
+        EventBus.Instance.OnTimerWarning -= ChangeTimerToWarning;
+        EventBus.Instance.OnTimerNoWarning -= SetTimerToNormal;
     }
 
+    private void ChangeTimerToWarning()
+    {
+        ChangeTimerToWarning(WarningTimerColor);
+    }
+
+    private void SetTimerToNormal()
+    {
+        ChangeTimerToWarning(DefaultColor);
+    }
     private void ChangeTimerToWarning(Color color)
     {
         TimerUIText.color = color;

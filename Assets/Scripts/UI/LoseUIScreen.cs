@@ -22,11 +22,13 @@ public class LoseUIScreen : MonoBehaviour
 
     public void OnRestartBtnPressed()
     {
+        Time.timeScale = 1;
         GameSceneManager.Instance.TransitionToScene("level 1", 0.5f, true);
     }
 
     public void OnQuitBtnPressed()
     {
+        Time.timeScale = 1;
         GameSceneManager.Instance.TransitionToScene("MainMenu", 0.5f, true);
     }
 }

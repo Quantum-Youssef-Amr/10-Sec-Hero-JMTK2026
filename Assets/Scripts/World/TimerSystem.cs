@@ -24,13 +24,13 @@ public class TimerSystem : MonoBehaviour
         TimerUpdater = StageTimerStartValue;
 
         EventBus.Instance.OnAddToTimer += AddTimeToTimer;
-        EventBus.Instance.OnStartTimer += () => StartCountDown();
+        EventBus.Instance.OnStartTimer += StartCountDown;
     }
 
     void OnDisable()
     {
         EventBus.Instance.OnAddToTimer -= AddTimeToTimer;
-        EventBus.Instance.OnStartTimer -= () => StartCountDown();
+        EventBus.Instance.OnStartTimer -= StartCountDown;
     }
 
     private void StartCountDown()

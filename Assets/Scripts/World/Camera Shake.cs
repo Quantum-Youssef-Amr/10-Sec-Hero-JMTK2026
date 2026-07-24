@@ -10,12 +10,17 @@ public class CameraShake : MonoBehaviour
     void Start()
     {
         _camera = Camera.main.transform;
-        EventBus.Instance.OnCameraShake += () => StartCoroutine(ShakeCamera());
+        EventBus.Instance.OnCameraShake += StartCameraShake;
     }
 
     void OnDisable()
     {
-        EventBus.Instance.OnCameraShake -= () => StartCoroutine(ShakeCamera());
+        EventBus.Instance.OnCameraShake -= StartCameraShake;
+    }
+
+    private void StartCameraShake()
+    {
+        StartCoroutine(ShakeCamera());
     }
 
     public IEnumerator ShakeCamera()
