@@ -8,7 +8,7 @@ public class TimerUI : MonoBehaviour
     [SerializeField] private Color WarningTimerColor, DefaultColor;
     [SerializeField] private Animation ClickAnimation;
     private TextMeshProUGUI TimerUIText;
-
+    private float _timerOldValue;
     void Start()
     {
         TimerUIText = GetComponent<TextMeshProUGUI>();
@@ -27,6 +27,11 @@ public class TimerUI : MonoBehaviour
     {
         string m_timerVal = timerValue > 10 ? "0" + timerValue : "00" + timerValue;
         TimerUIText.text = m_timerVal;
-        ClickAnimation.Play();
+
+        if (timerValue <= 3 || timerValue - _timerOldValue > 0)
+        {
+            ClickAnimation.Play();
+        }
+        _timerOldValue = timerValue;
     }
 }

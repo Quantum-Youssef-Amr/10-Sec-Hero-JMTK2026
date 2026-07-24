@@ -11,10 +11,11 @@ public class EventBus : MonoBehaviour
     public Action<float> OnDoorHealthChanged;
     public Action OnGameOver;
     public Action<int> OnWinLevel;
-    public Action OnWinRun;
+    public Action<int, int> OnWinRun;
     public Action OnCameraShake;
 
     public Action OnStartLevelSpawner;
+    public Action OnEnemyDeath;
     void Awake()
     {
         if (Instance != null) return;

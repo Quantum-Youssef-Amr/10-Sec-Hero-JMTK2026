@@ -28,6 +28,7 @@ public class EnemyHealth : Health
     private void DieWithoutReward()
     {
         EventBus.Instance.OnCameraShake?.Invoke();
+        EventBus.Instance.OnEnemyDeath?.Invoke();
         SpawnDeathParticles();
         // TODO add sounds
         base.Die();

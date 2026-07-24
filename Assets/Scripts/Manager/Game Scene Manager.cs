@@ -65,6 +65,11 @@ public class GameSceneManager : MonoBehaviour
         _transitionInProgress ??= StartCoroutine(m_transition.Transition(toScene).SetDuration(Duration).WithOverlay(WithOverlay).Preform());
     }
 
+    public void TransitionToScene(string toScene, float Duration, bool WithOverlay)
+    {
+        TransitionWithReplaceScene(SceneManager.GetActiveScene().name, toScene, Duration, WithOverlay);
+    }
+
 }
 
 public class SceneTransition
@@ -109,6 +114,7 @@ public class SceneTransition
 
     public IEnumerator Preform()
     {
+        Time.timeScale = 1;
         if (!_withOverlay)
             _overlay.alpha = 0;
 

@@ -12,7 +12,6 @@ public class DoorHealthUI : MonoBehaviour
 
     private void UpdateVisuals(float parentage)
     {
-        print(parentage);
         FullImage.fillAmount = parentage;
     }
 }

@@ -22,7 +22,7 @@ public class InLevelMenus : MonoBehaviour
     {
         if (nextLevel == 4)
         {
-            EventBus.Instance.OnWinRun?.Invoke();
+            EventBus.Instance.OnWinRun?.Invoke(SettingManager.Instance._maxKills, SettingManager.Instance._maxCombo);
             return;
         }
 

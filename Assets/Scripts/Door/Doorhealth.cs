@@ -43,7 +43,7 @@ public class DoorHealth : Health
             TakeDamage(1);
         }
 
-        if (collision.gameObject.layer == LayerMask.GetMask("Player") && _canAdvance)
+        if (collision.gameObject.CompareTag("Player") && _canAdvance)
             EventBus.Instance.OnWinLevel?.Invoke(NextLevelNumber);
     }
 

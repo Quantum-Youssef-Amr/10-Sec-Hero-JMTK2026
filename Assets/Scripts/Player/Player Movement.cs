@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float WalkingSpeed = 5, DashForce = 10, DashCoolDown = 0.4f, TimeScale = 1000;
     [SerializeField] private ParticleSystem DashParticles;
-
+    [SerializeField] private CircleCollider2D PlayerHitBox;
     private Rigidbody2D _rb;
     private Transform _t;
     private bool _canDash = true;
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 m_DashDir = _t.up;
         _canDash = false;
-
+        PlayerHitBox.radius = 1f;
         StartDashParticlesSystem();
         _rb.AddForce(DashForce * Time.deltaTime * TimeScale * m_DashDir, ForceMode2D.Impulse);
 
@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator ResetDash()
     {
+        yield return new WaitForSeconds(0.2f);
+        PlayerHitBox.radius = 0.3f;
         yield return new WaitForSeconds(DashCoolDown);
         _canDash = true;
     }

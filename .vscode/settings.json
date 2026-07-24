@@ -68,9 +68,5 @@
     "*.slnx": "*.csproj"
   },
   "dotnet.defaultSolution": "GMTK GAME JAM 2026.slnx",
-  "cSpell.words": [
-    "Behaviour",
-    "Lerp",
-    "Rigidbody"
-  ]
+  "cSpell.words": ["Behaviour", "Lerp", "Rigidbody", "UGUI"]
 }
