@@ -26,7 +26,7 @@ public class InLevelMenus : MonoBehaviour
             return;
         }
 
-        GameSceneManager.Instance.TransitionWithReplaceScene($"level {nextLevel - 1}", $"level {nextLevel}", 0.5f, true);
+        GameSceneManager.Instance.TransitionWithReplaceScene($"level {nextLevel - 1}", $"level {nextLevel}", 1f, true);
     }
 
     private void TogglePauseGame(InputAction.CallbackContext context)

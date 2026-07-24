@@ -894,6 +894,8 @@ MonoBehaviour:
   MainMixer: {fileID: 24100000, guid: 2c7646cc2dbadf64eb11cb62d3f9e78d, type: 2}
   Music: 1
   Sfx: 1
+  _maxKills: 0
+  _maxCombo: 0
 --- !u!1 &2016016318
 GameObject:
   m_ObjectHideFlags: 0

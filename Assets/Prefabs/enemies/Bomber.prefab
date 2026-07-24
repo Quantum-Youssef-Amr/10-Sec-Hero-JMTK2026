@@ -188,6 +188,7 @@ MonoBehaviour:
   MaxHealth: 1
   Reward: 3
   DeathParticles: {fileID: 6406547433875695506, guid: c42a77bde387e7c44b68c416c5afc777, type: 3}
+  RewardText: {fileID: 839786295873803114, guid: b90f7c7dc666de14b9f61483a231aefd, type: 3}
   HurtAnimation: {fileID: 3963617356569817658}
   ExplosionRadius: 4
   ExplosionParticles: {fileID: 6785545287414861009, guid: 42025e6870971664294af2a7055e2cb6, type: 3}

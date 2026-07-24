@@ -38,9 +38,9 @@ public class EnemyHealth : Health
     private void SpawnDeathParticles()
     {
         ParticleSystem.MainModule m_par = Instantiate(DeathParticles, transform.position, Quaternion.identity).GetComponent<ParticleSystem>().main;
-        TextMeshProUGUI m_rewardText = Instantiate(RewardText, transform.position, Quaternion.identity).GetComponent<TextMeshProUGUI>();
+        GameObject m_rewardText = Instantiate(RewardText, transform.position, Quaternion.identity);
 
-        m_rewardText.text = $"+{Reward}";
+        m_rewardText.GetComponent<TextMeshPro>().text = $"+{Reward}";
 
         m_par.startColor = GetComponent<SpriteRenderer>().color;
     }
