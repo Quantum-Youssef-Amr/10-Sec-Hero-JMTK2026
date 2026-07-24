@@ -13,7 +13,7 @@ public class VictoryScreenUI : MonoBehaviour
         EventBus.Instance.OnWinRun += ShowScreen;
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         EventBus.Instance.OnWinRun -= ShowScreen;
     }

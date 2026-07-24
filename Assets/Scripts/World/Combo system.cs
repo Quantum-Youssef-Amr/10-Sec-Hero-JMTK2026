@@ -14,7 +14,7 @@ public class ComboSystem : MonoBehaviour
         EventBus.Instance.OnEnemyDeath += CountCombos;
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         EventBus.Instance.OnEnemyDeath -= CountCombos;
     }

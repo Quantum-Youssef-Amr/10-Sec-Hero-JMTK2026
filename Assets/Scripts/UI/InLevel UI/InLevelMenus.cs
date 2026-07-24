@@ -8,7 +8,12 @@ public class InLevelMenus : MonoBehaviour
     #region Input
     private NewInputSystem _inputs;
     void OnEnable() => _inputs.Enable();
-    void OnDisable() => _inputs.Disable();
+    void OnDisable()
+    {
+        EventBus.Instance.OnWinLevel -= LoadNextLevel;
+        _inputs.Disable();
+    }
+
     void Awake() => _inputs = new();
     #endregion
 
@@ -16,11 +21,6 @@ public class InLevelMenus : MonoBehaviour
     {
         _inputs.UI.Pause.performed += TogglePauseGame;
         EventBus.Instance.OnWinLevel += LoadNextLevel;
-    }
-
-    void OnDestroy()
-    {
-        EventBus.Instance.OnWinLevel -= LoadNextLevel;
     }
 
     private void LoadNextLevel(int nextLevel)

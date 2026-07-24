@@ -11,7 +11,7 @@ public class CameraZoom : MonoBehaviour
         EventBus.Instance.OnPlayerDash += ZoomCamera;
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         EventBus.Instance.OnPlayerDash -= ZoomCamera;
     }

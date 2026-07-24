@@ -10,7 +10,7 @@ public class DoorHealthUI : MonoBehaviour
         EventBus.Instance.OnDoorHealthChanged += UpdateVisuals;
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         EventBus.Instance.OnDoorHealthChanged -= UpdateVisuals;
     }

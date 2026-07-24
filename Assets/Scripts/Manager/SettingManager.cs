@@ -18,7 +18,7 @@ public class SettingManager : MonoBehaviour
         EventBus.Instance.OnEnemyDeath += () => AddToKills(1);
     }
 
-    void OnDestroy()
+    void OnDisable()
     {
         EventBus.Instance.OnEnemyDeath -= () => AddToKills(1);
     }

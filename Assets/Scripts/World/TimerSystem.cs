@@ -24,13 +24,18 @@ public class TimerSystem : MonoBehaviour
         TimerUpdater = StageTimerStartValue;
 
         EventBus.Instance.OnAddToTimer += AddTimeToTimer;
-        EventBus.Instance.OnStartTimer += () => StartCoroutine(Countdown());
+        EventBus.Instance.OnStartTimer += () => StartCountDown();
     }
 
     void OnDestroy()
     {
         EventBus.Instance.OnAddToTimer -= AddTimeToTimer;
-        EventBus.Instance.OnStartTimer -= () => StartCoroutine(Countdown());
+        EventBus.Instance.OnStartTimer -= () => StartCountDown();
+    }
+
+    private void StartCountDown()
+    {
+        StartCoroutine(Countdown());
     }
 
     private void AddTimeToTimer(int additionalTime)
