@@ -13,6 +13,11 @@ public class CameraShake : MonoBehaviour
         EventBus.Instance.OnCameraShake += () => StartCoroutine(ShakeCamera());
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnCameraShake -= () => StartCoroutine(ShakeCamera());
+    }
+
     public IEnumerator ShakeCamera()
     {
         for (int i = 0; i < NumberOfShakes; i++)

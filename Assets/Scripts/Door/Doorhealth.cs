@@ -14,6 +14,11 @@ public class DoorHealth : Health
         EventBus.Instance.OnTimerTargetReached += ChangeVisuals;
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnTimerTargetReached -= ChangeVisuals;
+    }
+
     private void ChangeVisuals()
     {
         _canAdvance = true;

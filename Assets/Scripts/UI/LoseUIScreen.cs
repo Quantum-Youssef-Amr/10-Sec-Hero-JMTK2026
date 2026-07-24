@@ -9,6 +9,10 @@ public class LoseUIScreen : MonoBehaviour
     {
         EventBus.Instance.OnGameOver += ShowScreen;
     }
+    void OnDestroy()
+    {
+        EventBus.Instance.OnGameOver -= ShowScreen;
+    }
 
     private void ShowScreen()
     {

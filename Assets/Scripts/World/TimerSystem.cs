@@ -27,6 +27,12 @@ public class TimerSystem : MonoBehaviour
         EventBus.Instance.OnStartTimer += () => StartCoroutine(Countdown());
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnAddToTimer -= AddTimeToTimer;
+        EventBus.Instance.OnStartTimer -= () => StartCoroutine(Countdown());
+    }
+
     private void AddTimeToTimer(int additionalTime)
     {
         TimerUpdater += additionalTime;

@@ -10,6 +10,11 @@ public class DoorHealthUI : MonoBehaviour
         EventBus.Instance.OnDoorHealthChanged += UpdateVisuals;
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnDoorHealthChanged -= UpdateVisuals;
+    }
+
     private void UpdateVisuals(float parentage)
     {
         FullImage.fillAmount = parentage;

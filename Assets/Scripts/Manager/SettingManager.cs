@@ -18,6 +18,11 @@ public class SettingManager : MonoBehaviour
         EventBus.Instance.OnEnemyDeath += () => AddToKills(1);
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnEnemyDeath -= () => AddToKills(1);
+    }
+
     public void ToggleMusic()
     {
         Music = !Music;

@@ -11,6 +11,11 @@ public class CameraZoom : MonoBehaviour
         EventBus.Instance.OnPlayerDash += ZoomCamera;
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnPlayerDash -= ZoomCamera;
+    }
+
     private void ZoomCamera()
     {
         _main.orthographicSize = DashZoom;

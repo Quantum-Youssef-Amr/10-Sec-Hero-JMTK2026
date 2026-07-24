@@ -18,6 +18,13 @@ public class TimerUI : MonoBehaviour
         EventBus.Instance.OnTimerNoWarning += () => ChangeTimerToWarning(DefaultColor);
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnTimerUpdate -= UpdateTimerUI;
+        EventBus.Instance.OnTimerWarning -= () => ChangeTimerToWarning(WarningTimerColor);
+        EventBus.Instance.OnTimerNoWarning -= () => ChangeTimerToWarning(DefaultColor);
+    }
+
     private void ChangeTimerToWarning(Color color)
     {
         TimerUIText.color = color;

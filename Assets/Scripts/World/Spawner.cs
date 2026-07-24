@@ -15,6 +15,12 @@ public class Spawner : MonoBehaviour
         EventBus.Instance.OnStartLevelSpawner += () => StartCoroutine(SpawnEnemies());
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnTimerUpdate -= CheckForEnemiesUnlocks;
+        EventBus.Instance.OnStartLevelSpawner -= () => StartCoroutine(SpawnEnemies());
+    }
+
     private void CheckForEnemiesUnlocks(int TimerValue)
     {
         for (int enemyIdx = 0; enemyIdx < levelEnemiesUnlockTimings.Length; enemyIdx++)

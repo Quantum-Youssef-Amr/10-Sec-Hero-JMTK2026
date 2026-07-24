@@ -13,6 +13,11 @@ public class VictoryScreenUI : MonoBehaviour
         EventBus.Instance.OnWinRun += ShowScreen;
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnWinRun -= ShowScreen;
+    }
+
     private void ShowScreen(int enemiesKilled, int MaxCombos)
     {
         VictoryScreen.SetActive(true);

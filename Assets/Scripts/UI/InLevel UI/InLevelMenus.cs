@@ -18,6 +18,11 @@ public class InLevelMenus : MonoBehaviour
         EventBus.Instance.OnWinLevel += LoadNextLevel;
     }
 
+    void OnDestroy()
+    {
+        EventBus.Instance.OnWinLevel -= LoadNextLevel;
+    }
+
     private void LoadNextLevel(int nextLevel)
     {
         if (nextLevel == 4)
