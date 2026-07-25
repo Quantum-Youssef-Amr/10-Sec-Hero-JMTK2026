@@ -13473,10 +13473,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6199182828739991927}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -75, y: -65}
-  m_SizeDelta: {x: 130, y: 130}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3493949309742133602
 MonoBehaviour:
@@ -13524,7 +13524,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 106687172}
         m_TargetAssemblyTypeName: LoseUIScreen, Assembly-CSharp
-        m_MethodName: OnRestartBtnPressed
+        m_MethodName: OnQuitBtnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13682,10 +13682,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3377826756962924667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -65}
-  m_SizeDelta: {x: 130, y: 130}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0000076293945, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &4827188755679688390
 SpriteRenderer:
@@ -14396,7 +14396,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 106687172}
         m_TargetAssemblyTypeName: LoseUIScreen, Assembly-CSharp
-        m_MethodName: OnQuitBtnPressed
+        m_MethodName: OnRestartBtnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

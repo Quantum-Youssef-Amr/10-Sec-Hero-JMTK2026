@@ -13,12 +13,20 @@ public class Spawner : MonoBehaviour
         _t = transform;
         EventBus.Instance.OnTimerUpdate += CheckForEnemiesUnlocks;
         EventBus.Instance.OnStartLevelSpawner += StartEnemySpawner;
+        EventBus.Instance.OnWinRun += StopSpawner;
+
     }
 
     void OnDisable()
     {
         EventBus.Instance.OnTimerUpdate -= CheckForEnemiesUnlocks;
         EventBus.Instance.OnStartLevelSpawner -= StartEnemySpawner;
+        EventBus.Instance.OnWinRun -= StopSpawner;
+    }
+
+    private void StopSpawner(int _, int __)
+    {
+        StopAllCoroutines();
     }
 
     private void StartEnemySpawner()

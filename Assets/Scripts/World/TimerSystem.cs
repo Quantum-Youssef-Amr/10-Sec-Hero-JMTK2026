@@ -26,12 +26,21 @@ public class TimerSystem : MonoBehaviour
 
         EventBus.Instance.OnAddToTimer += AddTimeToTimer;
         EventBus.Instance.OnStartTimer += StartCountDown;
+        EventBus.Instance.OnWinRun += StopTimer;
     }
 
     void OnDisable()
     {
         EventBus.Instance.OnAddToTimer -= AddTimeToTimer;
         EventBus.Instance.OnStartTimer -= StartCountDown;
+        EventBus.Instance.OnWinRun -= StopTimer;
+
+    }
+
+
+    private void StopTimer(int arg1, int arg2)
+    {
+        StopAllCoroutines();
     }
 
     private void StartCountDown()

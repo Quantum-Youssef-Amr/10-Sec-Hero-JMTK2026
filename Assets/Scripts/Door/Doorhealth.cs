@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class DoorHealth : Health
@@ -9,15 +10,24 @@ public class DoorHealth : Health
     [SerializeField] private AudioSource DoorHitAudio, DoorOpenedAudio;
     private bool _canAdvance;
 
+    #region Input
+    private NewInputSystem _inputs;
+    void OnEnable() => _inputs.Enable();
+    void OnDisable()
+    {
+        _inputs.Disable();
+        EventBus.Instance.OnTimerTargetReached -= ChangeVisuals;
+    }
+
+    void Awake() => _inputs = new();
+    #endregion
+
+
     protected override void Start()
     {
         base.Start();
         EventBus.Instance.OnTimerTargetReached += ChangeVisuals;
-    }
-
-    void OnDisable()
-    {
-        EventBus.Instance.OnTimerTargetReached -= ChangeVisuals;
+        _inputs.Player.Cheats.performed += _ => WinLevel();
     }
 
     private void ChangeVisuals()
@@ -54,7 +64,12 @@ public class DoorHealth : Health
         }
 
         if (collision.gameObject.CompareTag("Player") && _canAdvance)
-            EventBus.Instance.OnWinLevel?.Invoke(NextLevelNumber);
+            WinLevel();
+    }
+
+    private void WinLevel()
+    {
+        EventBus.Instance.OnWinLevel?.Invoke(NextLevelNumber);
     }
 
     protected override void Die()
