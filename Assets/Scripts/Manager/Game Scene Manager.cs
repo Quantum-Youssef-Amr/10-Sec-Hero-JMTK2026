@@ -28,6 +28,7 @@ public class GameSceneManager : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 244;
         Instance.TransitionWithAddScene("MainMenu", 0, false);
     }
 
