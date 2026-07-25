@@ -118,15 +118,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Cheats"",
-                    ""type"": ""Button"",
-                    ""id"": ""a0f0b076-8ef0-4eaa-ac21-fe65f95b0147"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -325,17 +316,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""looking Around"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ac1214ba-0e78-4de6-bcca-0ec9f73dcf21"",
-                    ""path"": ""<Keyboard>/ctrl"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Cheats"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -946,7 +926,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_lookingAround = m_Player.FindAction("looking Around", throwIfNotFound: true);
-        m_Player_Cheats = m_Player.FindAction("Cheats", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1044,7 +1023,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_lookingAround;
-    private readonly InputAction m_Player_Cheats;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -1068,10 +1046,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/lookingAround".
         /// </summary>
         public InputAction @lookingAround => m_Wrapper.m_Player_lookingAround;
-        /// <summary>
-        /// Provides access to the underlying input action "Player/Cheats".
-        /// </summary>
-        public InputAction @Cheats => m_Wrapper.m_Player_Cheats;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1107,9 +1081,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
             @lookingAround.started += instance.OnLookingAround;
             @lookingAround.performed += instance.OnLookingAround;
             @lookingAround.canceled += instance.OnLookingAround;
-            @Cheats.started += instance.OnCheats;
-            @Cheats.performed += instance.OnCheats;
-            @Cheats.canceled += instance.OnCheats;
         }
 
         /// <summary>
@@ -1130,9 +1101,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
             @lookingAround.started -= instance.OnLookingAround;
             @lookingAround.performed -= instance.OnLookingAround;
             @lookingAround.canceled -= instance.OnLookingAround;
-            @Cheats.started -= instance.OnCheats;
-            @Cheats.performed -= instance.OnCheats;
-            @Cheats.canceled -= instance.OnCheats;
         }
 
         /// <summary>
@@ -1465,13 +1433,6 @@ public partial class @NewInputSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLookingAround(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "Cheats" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCheats(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

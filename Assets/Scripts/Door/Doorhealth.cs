@@ -10,24 +10,15 @@ public class DoorHealth : Health
     [SerializeField] private AudioSource DoorHitAudio, DoorOpenedAudio;
     private bool _canAdvance;
 
-    #region Input
-    private NewInputSystem _inputs;
-    void OnEnable() => _inputs.Enable();
-    void OnDisable()
-    {
-        _inputs.Disable();
-        EventBus.Instance.OnTimerTargetReached -= ChangeVisuals;
-    }
-
-    void Awake() => _inputs = new();
-    #endregion
-
-
     protected override void Start()
     {
         base.Start();
         EventBus.Instance.OnTimerTargetReached += ChangeVisuals;
-        _inputs.Player.Cheats.performed += _ => WinLevel();
+    }
+
+    void OnDisable()
+    {
+        EventBus.Instance.OnTimerTargetReached -= ChangeVisuals;
     }
 
     private void ChangeVisuals()
