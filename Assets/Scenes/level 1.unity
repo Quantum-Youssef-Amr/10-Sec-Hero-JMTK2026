@@ -1567,7 +1567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Servive For <size=1.3em><color=#0055FF>60</color></size> SECONDS
+  m_text: Servive For <size=1.3em><color=#862CF8>60</color></size> SECONDS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e202ed96029233041bb85ae3807683c8, type: 2}
   m_sharedMaterial: {fileID: 8876780455392779626, guid: e202ed96029233041bb85ae3807683c8, type: 2}
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: a517d7d36dfe59345a3810830782f9e8, type: 2}
+  m_Material: {fileID: 2100000, guid: 579bbbc941bbbaa48a5ef43f14e411f5, type: 2}
   m_Color: {r: 0.8490566, g: 0.108134575, b: 0.25569844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 69bda6b62030e3649aa396d0875b2cee, type: 2}
+  m_Material: {fileID: 2100000, guid: f127cbbf1b96de649ade09db3cd86756, type: 2}
   m_Color: {r: 0.049394794, g: 0.20486543, b: 0.6981132, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

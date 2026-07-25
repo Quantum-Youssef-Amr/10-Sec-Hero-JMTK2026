@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorHealth
   MaxHealth: 10
-  NextLevelNumber: 2
+  NextLevelNumber: 3
   DoorOverlay: {fileID: 11723018}
   DoorParticle: {fileID: 1846577214}
   DamageAnimation: {fileID: 48239168}
