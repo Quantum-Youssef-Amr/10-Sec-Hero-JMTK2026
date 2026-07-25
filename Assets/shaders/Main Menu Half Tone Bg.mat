@@ -55,17 +55,21 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dots_Count: 40
+    - _Dots_Count: 15
     - _Dots_Fade: 0
     - _Dots_width: 0
+    - _Flip_x: 0
+    - _Flip_y: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scroll_Speed: 0.1
     - _aspict: 1.8333334
-    - _offset: 0.12
+    - _aspicte: 1.83
+    - _offset: 0.15
+    - _screen_mode: 1
     m_Colors:
     - _Background_Color: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
-    - _Dots_Color: {r: 0.1333333, g: 0.1333333, b: 0.1333333, a: 1}
+    - _Dots_Color: {r: 0.3301887, g: 0.029079922, b: 0.02024743, a: 1}
     - _Dots_Fade_Diraction: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

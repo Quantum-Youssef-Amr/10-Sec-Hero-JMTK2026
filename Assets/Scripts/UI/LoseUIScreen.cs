@@ -18,6 +18,7 @@ public class LoseUIScreen : MonoBehaviour
     private void ShowScreen()
     {
         LoseScreen.SetActive(true);
+        MusicManager.Instance.StopMusic();
         GameOverSound.Play();
         Time.timeScale = 0;
     }
@@ -25,12 +26,14 @@ public class LoseUIScreen : MonoBehaviour
     public void OnRestartBtnPressed()
     {
         Time.timeScale = 1;
+        MusicManager.Instance.RestartMusic();
         GameSceneManager.Instance.TransitionToScene("level 1", 0.5f, true);
     }
 
     public void OnQuitBtnPressed()
     {
         Time.timeScale = 1;
+        MusicManager.Instance.RestartMusic();
         GameSceneManager.Instance.TransitionToScene("MainMenu", 0.5f, true);
     }
 }

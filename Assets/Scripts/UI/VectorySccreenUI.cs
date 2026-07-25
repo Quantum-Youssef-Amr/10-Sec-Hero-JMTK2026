@@ -21,6 +21,8 @@ public class VictoryScreenUI : MonoBehaviour
 
     private void ShowScreen(int enemiesKilled, int MaxCombos)
     {
+        Time.timeScale = 0;
+        MusicManager.Instance.StopMusic();
         VictoryScreen.SetActive(true);
         left.Play(); right.Play();
         VictoryAudio.Play();
