@@ -3106,7 +3106,7 @@
     "m_ObjectId": "7309a9842141453e9bb3efc5b51e2449",
     "m_Title": "Screen comp",
     "m_Position": {
-        "x": -3931.000244140625,
+        "x": -3931.0,
         "y": 459.0
     }
 }
@@ -4800,7 +4800,7 @@
     "m_ObjectId": "c51ddd0f15d3445f8bb413cec0ce27ab",
     "m_Title": "scroll",
     "m_Position": {
-        "x": -3111.000244140625,
+        "x": -3111.0,
         "y": 457.0
     }
 }
@@ -5120,8 +5120,8 @@
     "m_ObjectId": "d4d80c6621fb4cc5a7acd7f3ff6c565e",
     "m_Title": "Gray scale convertion",
     "m_Position": {
-        "x": -3393.000244140625,
-        "y": -9.000011444091797
+        "x": -3393.0,
+        "y": -9.0
     }
 }
 

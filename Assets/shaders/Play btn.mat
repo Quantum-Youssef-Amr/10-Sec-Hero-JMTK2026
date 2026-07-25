@@ -55,15 +55,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dots_Count: 2
-    - _Dots_width: 0
+    - _Dots_Count: 1
+    - _Dots_width: 0.102
     - _Flip_x: 1
     - _Flip_y: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scroll_Speed: 0.01
     - _aspicte: 12.956522
-    - _offset: 0.05
+    - _offset: 0.15
     - _screen_mode: 0
     m_Colors:
     - _Background_Color: {r: 1, g: 0.043974724, b: 0, a: 1}

@@ -6,9 +6,10 @@ using System;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float WalkingSpeed = 5, DashForce = 10, DashCoolDown = 0.4f, TimeScale = 1000;
+    [SerializeField] private float WalkingSpeed = 5, DashForce = 10, DashCoolDown = 0.4f, TimeScale = 1000, PlayerDashHitboxSize = 1f;
     [SerializeField] private ParticleSystem DashParticles;
     [SerializeField] private CircleCollider2D PlayerHitBox;
+    [SerializeField] private AudioSource PlayerDashAudio;
     private Rigidbody2D _rb;
     private Transform _t;
     private bool _canDash = true;
@@ -50,9 +51,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!_canDash) return;
 
+        PlayerDashAudio.Play();
         Vector2 m_DashDir = _t.up;
         _canDash = false;
-        PlayerHitBox.radius = 1f;
+        PlayerHitBox.radius = PlayerDashHitboxSize;
         StartDashParticlesSystem();
         _rb.AddForce(DashForce * Time.deltaTime * TimeScale * m_DashDir, ForceMode2D.Impulse);
 

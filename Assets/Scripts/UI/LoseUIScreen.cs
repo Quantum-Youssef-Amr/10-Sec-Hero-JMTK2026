@@ -4,6 +4,7 @@ using UnityEngine;
 public class LoseUIScreen : MonoBehaviour
 {
     [SerializeField] private GameObject LoseScreen;
+    [SerializeField] private AudioSource GameOverSound;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class LoseUIScreen : MonoBehaviour
     private void ShowScreen()
     {
         LoseScreen.SetActive(true);
+        GameOverSound.Play();
         Time.timeScale = 0;
     }
 

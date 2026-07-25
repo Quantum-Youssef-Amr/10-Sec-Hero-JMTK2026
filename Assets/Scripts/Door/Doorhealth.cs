@@ -6,6 +6,7 @@ public class DoorHealth : Health
     [SerializeField] private GameObject DoorOverlay;
     [SerializeField] private ParticleSystem DoorParticle;
     [SerializeField] private Animation DamageAnimation;
+    [SerializeField] private AudioSource DoorHitAudio, DoorOpenedAudio;
     private bool _canAdvance;
 
     protected override void Start()
@@ -21,6 +22,9 @@ public class DoorHealth : Health
 
     private void ChangeVisuals()
     {
+        if (!_canAdvance)
+            DoorOpenedAudio.Play();
+
         _canAdvance = true;
         DoorParticle.gameObject.SetActive(true);
         DoorOverlay.gameObject.SetActive(true);
@@ -45,6 +49,7 @@ public class DoorHealth : Health
 
             EventBus.Instance.OnCameraShake?.Invoke();
             DamageAnimation.Play();
+            DoorHitAudio.Play();
             TakeDamage(1);
         }
 

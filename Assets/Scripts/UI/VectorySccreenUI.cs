@@ -7,6 +7,7 @@ public class VictoryScreenUI : MonoBehaviour
     [SerializeField] private ParticleSystem left, right;
     [SerializeField] private TextMeshProUGUI ComboText, KillsText;
     [SerializeField] private Animation ComboTextAnimation, KillsTextAnimation;
+    [SerializeField] private AudioSource VictoryAudio;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class VictoryScreenUI : MonoBehaviour
     {
         VictoryScreen.SetActive(true);
         left.Play(); right.Play();
-        // todo add celebrating sound
+        VictoryAudio.Play();
 
         ComboText.text = $"x{MaxCombos}";
         KillsText.text = enemiesKilled.ToString();

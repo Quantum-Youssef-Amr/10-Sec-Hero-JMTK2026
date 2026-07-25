@@ -6,6 +6,7 @@ using System;
 public class TimerSystem : MonoBehaviour
 {
     [SerializeField] private int StageTimerStartValue, WarningOnTime = 3, TargetTime;
+    [SerializeField] private AudioSource ClickSound, GainTimeSound;
     private int _currentTime;
 
     private int TimerUpdater
@@ -41,6 +42,7 @@ public class TimerSystem : MonoBehaviour
     private void AddTimeToTimer(int additionalTime)
     {
         TimerUpdater += additionalTime;
+        GainTimeSound.Play();
     }
 
     private IEnumerator Countdown()
@@ -48,6 +50,7 @@ public class TimerSystem : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         TimerUpdater--;
+        ClickSound.Play();
 
         if (TimerUpdater <= 0)
         {

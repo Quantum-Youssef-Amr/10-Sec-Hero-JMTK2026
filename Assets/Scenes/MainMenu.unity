@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 213446950}
   - component: {fileID: 213446949}
   - component: {fileID: 213446948}
+  - component: {fileID: 213446951}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -460,6 +461,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213446946}
   m_CullTransparentMesh: 1
+--- !u!114 &213446951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213446946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510b376529a0a241ae55268dbdf376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseOverClick
+  MouseClick: {fileID: 8300000, guid: 29f6791b1366caf45a8818353e395912, type: 3}
 --- !u!1 &280111002
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +486,7 @@ GameObject:
   - component: {fileID: 280111006}
   - component: {fileID: 280111005}
   - component: {fileID: 280111004}
+  - component: {fileID: 280111007}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -593,6 +608,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280111002}
   m_CullTransparentMesh: 1
+--- !u!114 &280111007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280111002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510b376529a0a241ae55268dbdf376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseOverClick
+  MouseClick: {fileID: 8300000, guid: 29f6791b1366caf45a8818353e395912, type: 3}
 --- !u!1 &321310344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1194,7 @@ GameObject:
   - component: {fileID: 1008636829}
   - component: {fileID: 1008636828}
   - component: {fileID: 1008636827}
+  - component: {fileID: 1008636830}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1287,6 +1316,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008636825}
   m_CullTransparentMesh: 1
+--- !u!114 &1008636830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008636825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510b376529a0a241ae55268dbdf376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseOverClick
+  MouseClick: {fileID: 8300000, guid: 29f6791b1366caf45a8818353e395912, type: 3}
 --- !u!1 &1247594578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1380,7 @@ GameObject:
   - component: {fileID: 1284627269}
   - component: {fileID: 1284627268}
   - component: {fileID: 1284627267}
+  - component: {fileID: 1284627270}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -1459,6 +1502,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284627265}
   m_CullTransparentMesh: 1
+--- !u!114 &1284627270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284627265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510b376529a0a241ae55268dbdf376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseOverClick
+  MouseClick: {fileID: 8300000, guid: 29f6791b1366caf45a8818353e395912, type: 3}
 --- !u!1 &1289576271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1744,7 @@ GameObject:
   - component: {fileID: 1391148254}
   - component: {fileID: 1391148253}
   - component: {fileID: 1391148252}
+  - component: {fileID: 1391148255}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -1809,6 +1866,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391148250}
   m_CullTransparentMesh: 1
+--- !u!114 &1391148255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391148250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f510b376529a0a241ae55268dbdf376b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseOverClick
+  MouseClick: {fileID: 8300000, guid: 29f6791b1366caf45a8818353e395912, type: 3}
 --- !u!1 &1395452522
 GameObject:
   m_ObjectHideFlags: 0

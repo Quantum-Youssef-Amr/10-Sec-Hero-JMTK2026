@@ -9,6 +9,7 @@ public class EnemyHealth : Health
     [SerializeField] protected int Reward;
     [SerializeField] protected GameObject DeathParticles, RewardText;
     [SerializeField] protected Animation HurtAnimation;
+    [SerializeField] private AudioClip DeathSound;
     protected override void Die()
     {
         EventBus.Instance.OnAddToTimer?.Invoke(Reward);
@@ -31,7 +32,7 @@ public class EnemyHealth : Health
         EventBus.Instance.OnCameraShake?.Invoke();
         EventBus.Instance.OnEnemyDeath?.Invoke();
         SpawnDeathParticles();
-        // TODO add sounds
+        AudioManager.Instance.PlaySound(DeathSound);
         base.Die();
     }
 
