@@ -48,10 +48,14 @@
 **Team:** Solo
 
 ---
+## License
 
-## 📝 License
+NO License
+Copyright (c) 2026 Youssef Amr.
 
-This project is open source for educational purposes. All assets created during the jam are original.
+Permission is NOT granted to use, copy, modify, merge, publish, distribute, 
+sublicense, or sell copies of this software without prior written permission 
+from Youssef Amr Or The Solo Dev.
 
 ---
 
@@ -64,5 +68,4 @@ This project is open source for educational purposes. All assets created during 
 
 ## 🚀 Download
 
-Play the game on [Itch.io](#) ().
-still in dev, just wait 2 days (☞ﾟヮﾟ)☞
+Play the game on [Itch.io](https://youssef-amr-thesolodev.itch.io/10-sec-hero).
