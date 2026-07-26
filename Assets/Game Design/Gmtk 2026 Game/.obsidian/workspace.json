@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "ddecef8cb29e6c8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb17ffa74b2fedb8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "614c93daa99ad932",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TO-Dos/To - do list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "To - do list"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a067746f361803c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0d8516411672158",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d81777142b957a72",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "084c03e1e5d0755b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "fa791244c88ba053",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "0e5bdd3bd7e92bd7",
+    "type": "split",
+    "children": [
+      {
+        "id": "9db7328aa4161d8d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97bf7aede818e3da",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TO-Dos/To - do list.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for To - do list"
+            }
+          },
+          {
+            "id": "f2046314b4817db0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TO-Dos/To - do list.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from To - do list"
+            }
+          },
+          {
+            "id": "7115eb032850e991",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b68687e4ff089586",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "476ea14816848d90",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TO-Dos/To - do list.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of To - do list"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "614c93daa99ad932",
+  "lastOpenFiles": [
+    "TO-Dos/To - do list.md",
+    "TO-Dos/Art to-do.md",
+    "Untitled.canvas",
+    "Game System Design.canvas",
+    "GDD/TEN SECOND HERO.md",
+    "GDD/MOVEMENT SYSTEM — GDD.md",
+    "GDD/Levels GDD.md",
+    "GDD/Enemies GDD.md",
+    "Untitled 1.canvas",
+    "TO-Dos",
+    "2 to -do.md",
+    "GDD",
+    "Welcome.md"
+  ]
+}
