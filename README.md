@@ -33,7 +33,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Engine:** Unity 2022 LTS (2D)
+- **Engine:** Unity 6.3 LTS (2D)
 - **Language:** C#
 - **Art:** Unity primitives + custom sprites
 - **Audio:** Free SFX + custom generated sounds
