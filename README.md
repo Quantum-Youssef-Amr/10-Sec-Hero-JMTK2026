@@ -16,8 +16,8 @@
 
 | Action | Input |
 |--------|-------|
-| Move | WASD / Arrow Keys |
-| Dash Attack | Space / Shift |
+| Move | WASD |
+| Dash Attack | Space / Mouse left click |
 
 **Objective:**
 - Kill enemies to add +2 seconds to the timer
