@@ -279,9 +279,9 @@ Here's your **updated, comprehensive To-Do List** with all new edits from the GD
 
 ## 🎉 CELEBRATE!
 - [x] **You finished a jam game.** 🎉
-- [ ] Post on social media.
-- [ ] Play other jam games.
-- [ ] Rest.
+- [x] Post on social media.
+- [x] Play other jam games.
+- [x] Rest.
 
 ---
 ## ✅ MINIMUM VIABLE PRODUCT (MVP) TO SUBMIT:
